@@ -1,0 +1,50 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "lowerLimit": "#9.9",
+      "upperLimit": "#10.1",
+      "worstLow": "#9.98",
+      "worstHigh": "#10.02"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "measured": "10.1"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "measured": "10.11"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "measured": "10.1",
+      "uncertainty": "0"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "uncertainty": "1"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  }
+]
